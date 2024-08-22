@@ -22,7 +22,7 @@ function App() {
       >
         <ReccomendChannels isCollapsed={isCollapsed} onToggle={handleToggle} />
       </div>
-      <div className="flex-grow ml-auto">
+      <div className="flex-grow ml-auto pt-20 px-6">
         <GamesCataloge />
       </div>
     </div>

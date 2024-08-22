@@ -3,28 +3,34 @@ import Icons from "./Icons";
 
 function NavBar() {
   return (
-    <nav className="bg-[#18181a] text-white grid grid-cols-4 items-center p-2">
-      <div className="flex items-center space-x-4">
+    <nav className="bg-[#18181a] text-white grid grid-cols-8 items-center p-2">
+      <div className="flex items-center space-x-4 col-span-2">
         <img
           src="https://cdn-icons-png.flaticon.com/512/5968/5968819.png"
           alt=""
           className="h-8"
         />
-        <h2 className="text-lg hover:text-[#bf94ff] hover:underline hover:underline-offset-8 transition-colors duration-300">
-          <a href="">Siguiendo</a>
-        </h2>
-        <h2 className="text-lg hover:text-[#bf94ff] hover:underline hover:underline-offset-8 transition-colors duration-300">
-          <a href="">Explorar</a>
-        </h2>
+        <a
+          href=""
+          className="text-lg hover:text-[#bf94ff] hover:underline hover:underline-offset-8 transition-colors duration-300 underline-offset-8"
+        >
+          <h2>Siguiendo</h2>
+        </a>
+        <a
+          href=""
+          className="text-lg hover:text-[#bf94ff] hover:underline hover:underline-offset-8 transition-colors duration-300 underline-offset-8"
+        >
+          <h2>Explorar</h2>
+        </a>
         <SelectOptions />
       </div>
-      <div className="flex items-center w-full">
+      <div className="flex items-center w-full col-span-4">
         <input
           type="text"
           placeholder="Buscar"
-          className="bg-[#18181a] text-white border border-gray-600 p-2 h-full w-full rounded-l"
+          className="bg-[#18181a] text-white border border-gray-600 p-2 h-10 w-full rounded-l"
         />
-        <button className="bg-[#36363a] p-2 h-full rounded-r">
+        <button className="bg-[#36363a] p-2 h-10 rounded-r flex items-center justify-center">
           <svg
             xmlns="http://www.w3.org/2000/svg"
             viewBox="0 0 512 512"
@@ -34,10 +40,10 @@ function NavBar() {
           </svg>
         </button>
       </div>
-      <div className="flex space-x-4">
+      <div className="flex space-x-4 col-span-1">
         <Icons />
       </div>
-      <div className="flex justify-end">
+      <div className="flex justify-end col-span-1">
         <img
           src="https://static-cdn.jtvnw.net/user-default-pictures-uv/215b7342-def9-11e9-9a66-784f43822e80-profile_image-70x70.png"
           alt=""
