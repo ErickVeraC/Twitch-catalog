@@ -142,14 +142,87 @@ const games = [
     viewers: "2.9 k",
     tags: ["Juego de rol"],
   },
+  {
+    id: 21,
+    title: "Halo Infinite",
+    image: "https://static-cdn.jtvnw.net/ttv-boxart/506416-285x380.jpg",
+    viewers: "1.9 k",
+    tags: ["FPS"],
+  },
+  {
+    id: 22,
+    title: "Doom",
+    image: "https://static-cdn.jtvnw.net/ttv-boxart/638551656_IGDB-285x380.jpg",
+    viewers: "3 k",
+    tags: ["FPS"],
+  },
+  {
+    id: 23,
+    title: "Cyberpunk 2077",
+    image: "https://static-cdn.jtvnw.net/ttv-boxart/65876-285x380.jpg",
+    viewers: "4.3 k",
+    tags: ["FPS"],
+  },
+  {
+    id: 24,
+    title: "Red Dead Redemption 2",
+    image: "https://static-cdn.jtvnw.net/ttv-boxart/493959_IGDB-285x380.jpg",
+    viewers: "2.6 k",
+    tags: ["Juego de rol"],
+  },
+  {
+    id: 25,
+    title: "South Park",
+    image: "https://static-cdn.jtvnw.net/ttv-boxart/8105_IGDB-285x380.jpg",
+    viewers: "2.9 k",
+    tags: ["Juego de rol"],
+  },
 ];
 
 function GamesCataloge() {
   return (
-    <section>
+    <section className="pb-6">
       <div>
         <Explore />
       </div>
+      <div className="flex gap-2 mb-8">
+        <button className="text-indigo-400 font-bold text-xl py-2 rounded-lg underline decoration-indigo-900 decoration-2 hover:text-indigo-900 underline-offset-8">
+          Categorías
+        </button>
+        <button className="text-white font-bold text-xl py-2 px-2 rounded-lg hover:text-indigo-900">
+          Canales en Vivo
+        </button>
+      </div>
+      <div className="flex justify-between items-center mb-4 h-8">
+        <div className="flex items-center rounded-lg overflow-hidden border border-white hover:border-indigo-900 h-full">
+          <button className="bg-white bg-opacity-10 p-1.5 flex items-center justify-center rounded-l-lg h-full">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              viewBox="0 0 512 512"
+              className="h-4 w-4 fill-current text-white"
+            >
+              <path d="M416 208c0 45.9-14.9 88.3-40 122.7L502.6 457.4c12.5 12.5 12.5 32.8 0 45.3s-32.8 12.5-45.3 0L330.7 376c-34.4 25.2-76.8 40-122.7 40C93.1 416 0 322.9 0 208S93.1 0 208 0S416 93.1 416 208zM208 352a144 144 0 1 0 0-288 144 144 0 1 0 0 288z" />
+            </svg>
+          </button>
+          <input
+            type="text"
+            placeholder="Buscar etiqueta de categorías"
+            className="bg-white bg-opacity-10 p-1.5 outline-none flex-grow h-full"
+          />
+        </div>
+        <div className="flex items-center gap-2 h-full">
+          <span className="font-light text-white">Ordenar por:</span>
+          <select className="border border-white rounded-lg p-1.5 bg-white bg-opacity-10 text-white hover:bg-indigo-900 hover:text-indigo-900 h-full">
+            <option className="bg-white bg-opacity-10 text-white">
+              Recomendados para ti
+            </option>
+            <option className="bg-white bg-opacity-10 text-white">
+              Más espectadores
+            </option>
+          </select>
+        </div>
+      </div>
+
       <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5 xl:grid-cols-7 gap-4">
         {games.map((game) => (
           <Sleeve key={game.id} {...game} />
