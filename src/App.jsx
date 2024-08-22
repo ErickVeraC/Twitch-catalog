@@ -1,5 +1,11 @@
+import GamesCataloge from "./components/GamesCataloge";
+
 function App() {
-  return <></>;
+  return (
+    <>
+      <GamesCataloge />
+    </>
+  );
 }
 
 export default App;
