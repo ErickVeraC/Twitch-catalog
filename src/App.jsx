@@ -1,17 +1,28 @@
+import React, { useState } from "react";
 import GamesCataloge from "./components/GamesCataloge";
 import NavBar from "./components/NavBar";
 import ReccomendChannels from "./components/ReccomendChannels";
 
 function App() {
+  const [isCollapsed, setIsCollapsed] = useState(false);
+
+  const handleToggle = () => {
+    setIsCollapsed(!isCollapsed);
+  };
+
   return (
-    <div className="grid grid-cols-12 gap-4">
-      <div className="col-span-12">
+    <div className="flex">
+      <div className="fixed top-0 left-0 w-full z-10">
         <NavBar />
       </div>
-      <div className="col-span-3">
-        <ReccomendChannels />
+      <div
+        className={`flex-none transition-all duration-300 ${
+          isCollapsed ? "w-16" : "w-64"
+        }`}
+      >
+        <ReccomendChannels isCollapsed={isCollapsed} onToggle={handleToggle} />
       </div>
-      <div className="col-span-9">
+      <div className="flex-grow ml-auto">
         <GamesCataloge />
       </div>
     </div>
