@@ -122,7 +122,7 @@ function ReccomendChannels({ isCollapsed, onToggle }) {
               actualGame={user.actualGame}
               views={user.views}
               isActive={user.isActive}
-              collapsed={isCollapsed} // Pasar el estado de colapso al componente Twitcher
+              collapsed={isCollapsed}
             />
           ))}
         </div>

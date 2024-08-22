@@ -193,8 +193,8 @@ function GamesCataloge() {
           Canales en Vivo
         </button>
       </div>
-      <div className="flex justify-between items-center mb-4 h-8">
-        <div className="flex items-center rounded-lg overflow-hidden border border-white hover:border-indigo-900 h-full">
+      <div className="flex flex-col sm:flex-row justify-between items-center mb-4 h-8">
+        <div className="flex items-center rounded-lg overflow-hidden border border-white hover:border-indigo-900 h-full mb-2 sm:mb-0">
           <button className="bg-white bg-opacity-10 p-1.5 flex items-center justify-center rounded-l-lg h-full">
             <svg
               xmlns="http://www.w3.org/2000/svg"

@@ -12,23 +12,23 @@ function NavBar() {
         />
         <a
           href=""
-          className="text-lg hover:text-[#bf94ff] hover:underline hover:underline-offset-8 transition-colors duration-300 underline-offset-8"
+          className="hidden sm:block text-lg hover:text-[#bf94ff] hover:underline hover:underline-offset-8 transition-colors duration-300 underline-offset-8"
         >
           <h2>Siguiendo</h2>
         </a>
         <a
           href=""
-          className="text-lg hover:text-[#bf94ff] hover:underline hover:underline-offset-8 transition-colors duration-300 underline-offset-8"
+          className="hidden sm:block text-lg hover:text-[#bf94ff] hover:underline hover:underline-offset-8 transition-colors duration-300 underline-offset-8"
         >
           <h2>Explorar</h2>
         </a>
         <SelectOptions />
       </div>
-      <div className="flex items-center w-full col-span-4">
+      <div className="hidden sm:flex items-center w-full col-span-4">
         <input
           type="text"
           placeholder="Buscar"
-          className="bg-[#18181a] text-white border border-gray-600 p-2 h-10 w-full rounded-l"
+          className="bg-[#18181a] text-white border border-gray-600 p-2 h-10 w-full md:w-1/2 lg:w-3/4 rounded-l"
         />
         <button className="bg-[#36363a] p-2 h-10 rounded-r flex items-center justify-center">
           <svg
@@ -40,13 +40,13 @@ function NavBar() {
           </svg>
         </button>
       </div>
-      <div className="flex space-x-4 col-span-1">
+      <div className="hidden sm:flex space-x-4 col-span-1">
         <Icons />
       </div>
-      <div className="flex justify-end col-span-1">
+      <div className="flex justify-end col-span-1 sm:justify-end">
         <img
           src="https://static-cdn.jtvnw.net/user-default-pictures-uv/215b7342-def9-11e9-9a66-784f43822e80-profile_image-70x70.png"
-          alt=""
+          alt="profile image"
           className="h-8 w-8 rounded-full object-cover"
         />
       </div>
